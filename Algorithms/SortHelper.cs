@@ -13,6 +13,7 @@ public class SortHelper
             if (typeof(T) == typeof(char)) array.SetValue((char)rnd.Next(0, 50), i);
             else array.SetValue(rnd.Next(0, 50), i);
         }
+        
         return array;
     }
 
