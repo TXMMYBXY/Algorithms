@@ -1,4 +1,4 @@
-﻿namespace Algorithms;
+﻿namespace Algorithms.SortAlgorithm;
 
 public class SortHelper
 {
