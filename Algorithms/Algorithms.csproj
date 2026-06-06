@@ -6,4 +6,8 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Structures\Structures\Structures.csproj" />
+    </ItemGroup>
+
 </Project>

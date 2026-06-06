@@ -25,7 +25,7 @@ public class SortHelper
             {
                 if (array[i].CompareTo(array[j]) < 0)
                 {
-                    array = _Swap(array, i, j);
+                    (array[i], array[j]) = (array[j], array[i]);
                 }
             }
         }
@@ -41,7 +41,7 @@ public class SortHelper
             {
                 if (array[i].CompareTo(array[j]) > 0)
                 {
-                    array = _Swap(array, i, j);
+                    (array[i], array[j]) = (array[j], array[i]);
                 }
             }
         }
@@ -59,7 +59,8 @@ public class SortHelper
                 {
                     break;
                 }
-                array = _Swap(array, j, j - 1);
+
+                (array[j], array[j - 1]) = (array[j - 1], array[j]);
             }
         }
         
@@ -77,7 +78,7 @@ public class SortHelper
             {
                 if (array[i].CompareTo(array[i + 1]) > 0)
                 {
-                    array = _Swap(array, i, i + 1);
+                    (array[i], array[i + 1]) = (array[i + 1], array[i]);
                 }
             }
             right--;
@@ -86,7 +87,7 @@ public class SortHelper
             {
                 if (array[j].CompareTo(array[j - 1]) < 0)
                 {
-                    array = _Swap(array, j, j - 1);
+                    (array[j], array[j - 1]) = (array[j - 1], array[j]);
                 }
 
             }
@@ -116,22 +117,12 @@ public class SortHelper
             {
                 if (array[i].CompareTo(array[i + step]) > 0)
                 {
-                    array = _Swap(array, i, i + step);
+                    (array[i], array[i + step]) = (array[i + step], array[i]);
                     swaped = true;
                 }
             }
         }
 
-        return array;
-    }
-
-    private T[] _Swap<T>(T[] array, int i, int j)
-    {
-        var temp = array.GetValue(j);
-        
-        array.SetValue(array.GetValue(i), j);
-        array.SetValue(temp, i);
-        
         return array;
     }
     
